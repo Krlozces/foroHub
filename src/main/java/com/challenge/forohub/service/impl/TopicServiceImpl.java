@@ -2,7 +2,6 @@ package com.challenge.forohub.service.impl;
 
 import com.challenge.forohub.entity.Topic;
 import com.challenge.forohub.repository.ITopicRepository;
-import com.challenge.forohub.repository.IUserRepository;
 import com.challenge.forohub.service.ITopicService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
