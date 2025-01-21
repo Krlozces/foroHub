@@ -1,9 +1,16 @@
 package com.challenge.forohub.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.List;
-
+@Entity
+@Table(name = "courses")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
