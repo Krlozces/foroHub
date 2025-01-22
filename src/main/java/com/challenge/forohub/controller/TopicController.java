@@ -2,10 +2,10 @@ package com.challenge.forohub.controller;
 
 import com.challenge.forohub.entity.Topic;
 import com.challenge.forohub.service.ITopicService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,7 +42,7 @@ public class TopicController {
     }
 
     @PostMapping
-    public ResponseEntity<Topic> guardar(@RequestBody Topic topic) {
+    public ResponseEntity<Topic> guardar(@Valid @RequestBody Topic topic) {
         return ResponseEntity.status(HttpStatus.CREATED).body(iTopicService.guardar(topic));
     }
 }
